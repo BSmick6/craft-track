@@ -4,10 +4,8 @@ import Table from "./Table";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Tarkooooo</h1>
-        <Table />
-      </header>
+      <h1>Tarkooooo</h1>
+      <Table />
     </div>
   );
 }
