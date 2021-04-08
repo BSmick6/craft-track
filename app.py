@@ -63,6 +63,7 @@ class Craft:
 
 
 r = requests.get("https://escapefromtarkov.fandom.com/wiki/Crafts")
+# "https://escapefromtarkov.fandom.com/wiki/Barter_trades"
 soup = BeautifulSoup(r.content, 'html.parser')
 r.close()
 crafts = soup.select("tr + tr")

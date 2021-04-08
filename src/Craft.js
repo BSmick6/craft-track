@@ -6,14 +6,23 @@ class Craft extends Component {
       <div className="craft">
         {this.props.craft.ingredients.map((ingredient, i) => (
           <span key={i}>
-            <img src={ingredient.icon} alt={ingredient.name} />$
-            {this.props.prices[ingredient.name]}x{ingredient.quantity}=$
+            <img
+              src={ingredient.icon.slice(
+                0,
+                ingredient.icon.indexOf("/revision")
+              )}
+              alt={ingredient.name}
+            />
+            ${this.props.prices[ingredient.name]}x{ingredient.quantity}=$
             {this.props.prices[ingredient.name] * ingredient.quantity}
           </span>
         ))}
         <big>=></big>
         <img
-          src={this.props.craft.product.icon}
+          src={this.props.craft.product.icon.slice(
+            0,
+            this.props.craft.product.icon.indexOf("/revision")
+          )}
           alt={this.props.craft.product.name}
         />
         x{this.props.craft.product.quantity}
